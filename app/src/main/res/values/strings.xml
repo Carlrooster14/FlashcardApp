@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Flashcard_App</string>
+    <string name="who_was_the_1st_president_of_the_united_states">Who was the 1st President of the United States?</string>
+    <string name="reveal_the_answer">Reveal the answer</string>
+    <string name="john_snow">John Snow</string>
+    <string name="allison_fils">Allison Fils</string>
+    <string name="max_weber">Max Weber</string>
+    <string name="isaac_newton">Isaac Newton</string>
+    <string name="physician">One of them was a physician</string>
+    <string name="edit_by_tk_dreamer">Edit by Tk_Dreamer</string>
+</resources>
