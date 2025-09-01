@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val flashcardAnswer2 = findViewById<TextView>(R.id.flashcard_answer2)
         val flashcardAnswer3 = findViewById<TextView>(R.id.flashcard_answer3)
         val flashcardAnswer4 = findViewById<TextView>(R.id.flashcard_answer4)
+        val flashcardAnswer5 = findViewById<TextView>(R.id.flashcard_answer5)
         val button1 = findViewById<Button>(R.id.button)
 
          button1.setOnClickListener {
@@ -29,10 +30,14 @@ class MainActivity : AppCompatActivity() {
                  flashcardAnswer1.visibility = View.INVISIBLE
                  flashcardAnswer2.visibility = View.INVISIBLE
                  flashcardAnswer3.visibility = View.INVISIBLE
+                 flashcardAnswer4.visibility = View.INVISIBLE
+                 flashcardAnswer5.visibility = View.VISIBLE
              } else {
                  flashcardAnswer1.visibility = View.VISIBLE
                  flashcardAnswer2.visibility = View.VISIBLE
                  flashcardAnswer3.visibility = View.VISIBLE
+                 flashcardAnswer4.visibility = View.VISIBLE
+                 flashcardAnswer5.visibility = View.INVISIBLE
              }
          }
     }

@@ -90,4 +90,17 @@
         android:text="@string/edit_by_tk_dreamer"
         android:textColor="@color/black"
         android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/flashcard_answer5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_below="@id/flashcard_question"
+        android:text="@string/isaac_newton"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:visibility="invisible"/>
 </RelativeLayout>
