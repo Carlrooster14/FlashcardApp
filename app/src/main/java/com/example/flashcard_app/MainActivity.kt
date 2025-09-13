@@ -2,9 +2,11 @@ package com.example.flashcard_app
 
 import android.R.id.button2
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +14,7 @@ import androidx.core.view.isVisible
 
 class MainActivity : AppCompatActivity() {
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,9 +25,10 @@ class MainActivity : AppCompatActivity() {
         val flashcardAnswer3 = findViewById<TextView>(R.id.flashcard_answer3)
         val flashcardAnswer4 = findViewById<TextView>(R.id.flashcard_answer4)
         val flashcardAnswer5 = findViewById<TextView>(R.id.flashcard_answer5)
-        val button1 = findViewById<Button>(R.id.button)
+        val button = findViewById<Button>(R.id.button)
+        val changeActivity = findViewById<ImageView>(R.id.add)
 
-         button1.setOnClickListener {
+         button.setOnClickListener {
              if (flashcardAnswer1.isVisible) {
                  flashcardAnswer1.visibility = View.INVISIBLE
                  flashcardAnswer2.visibility = View.INVISIBLE
@@ -38,6 +41,14 @@ class MainActivity : AppCompatActivity() {
                  flashcardAnswer3.visibility = View.VISIBLE
                  flashcardAnswer4.visibility = View.VISIBLE
                  flashcardAnswer5.visibility = View.INVISIBLE
+             }
+
+             changeActivity.setOnClickListener {
+                 fun launchComposeView() {
+                     val i = Intent(this@MainActivity, MainActivity2::class.java)
+                     startActivity(i) // brings up the second activity
+                 }
+                 launchComposeView()
              }
          }
     }
